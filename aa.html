@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>Q&A</title> 
+<link rel="stylesheet" type="text/css" href="1css.css">
+
+
+</head>
+<body class="b">
+ <center>
+  <p class="p">Q&A</p>
+<div class="flex-container">
+  <div class="flex-item1"  >这是问题</div>
+  <div class="flex-item" id="q1" >浙大最潮的学生组织是？</div>
+  <div class="qq4" id="show1" style="display: none;">求是潮</div>
+  <div class="flex-item" id="q2">求是潮的办公室在哪？</div>
+  <div class="qq4" id="show2" style="display: none;">不知道哦</div>
+  <div class="flex-item" id="q3">什么问题呢？</div>
+  <div class="qq4" id="show3" style="display: none;">不知道哦</div>
+  <div class="flex-item" id="q4">aaa</div>  
+  <div class="qq4" id="show4" style="display: none;">aaaa</div>
+</div>
+</center>
+</body>
+</html>
+<script type="text/javascript">
+  var btn1 = document.querySelector("#q1");
+  btn1.onclick = function () {
+      document.getElementById("show1");
+            
+            if(show1.style.display=="none"){
+                 document.getElementById("show1").style.display = "block";
+                     
+            }
+          else if(show1.style.display=="block"){
+               document.getElementById("show1").style.display = "none";
+   
+        }
+
+        }
+        var btn2 = document.querySelector("#q2");
+        btn2.onclick = function () {
+       document.getElementById("show2");
+            
+            if(show2.style.display=="none"){
+                 document.getElementById("show2").style.display = "block";
+                     
+            }
+          else if(show2.style.display=="block"){
+               document.getElementById("show2").style.display = "none";
+   
+        }
+        }
+        var btn3 = document.querySelector("#q3");
+       btn3.onclick = function () {
+            document.getElementById("show3");
+            
+            if(show3.style.display=="none"){
+                 document.getElementById("show3").style.display = "block";
+                     
+            }
+          else if(show3.style.display=="block"){
+               document.getElementById("show3").style.display = "none";
+   
+        }
+    }
+         var btn4 = document.querySelector("#q4");
+        btn4.onclick = function () {
+            document.getElementById("show4");
+            
+            if(show4.style.display=="none"){
+                 document.getElementById("show4").style.display = "block";
+                     
+            }
+          else if(show4.style.display=="block"){
+               document.getElementById("show4").style.display = "none";
+   
+        }
+          }
+        
+  
+       
+</script>
