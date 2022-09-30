@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>h5小游戏</title>
+	<meta http_equiv="content"contect="text/html"charset="utf-8"/>
+	<style type="text/css">
+         #h5game {
+           border: 2px aqua;
+             
+             display: block;
+           margin: 0 auto;
+    }
+
+</style>
+</head>
+<body>
+	<canvas id="h5game" width="600" height="600" align="center"></canvas>
+<script type="text/javascript">
+function draw(){
+    var canvas = document.getElementById("h5game");
+    if(!canvas.getContext) return;
+    var ctx = canvas.getContext("2d");
+     var grd=ctx.createRadialGradient(300,300,200,300,280,440);
+grd.addColorStop(0,"deepskyblue");
+grd.addColorStop(1,"aqua");
+ctx.fillStyle=grd;
+ctx.fillRect(0,0,600,600);
+    for(var i=50;i<600;i+=50){
+              ctx.beginPath(); 
+              ctx.lineJoin="round";
+    ctx.moveTo(0, i); 
+    ctx.lineTo(600,i );  
+    ctx.closePath();
+    ctx.stroke(); 
+    }
+     for(var j=50;j<600;j+=50){
+              ctx.beginPath(); 
+              ctx.lineJoin="round";
+    ctx.moveTo(j, 0); 
+    ctx.lineTo(j,600 );  
+    ctx.closePath();
+    ctx.stroke(); 
+    }
+}
+
+draw();
+</script>
+ <div style="width: 0px;height:12px;line-height: 12px;background: pink;">
+    0%</div>
+    <script>
+        var div=document.querySelector('div')
+        div.onclick=function(){
+            var timer=requestAnimationFrame(function fn(){
+                if(parseInt(div.style.width)<300){
+                    div.style.width=parseInt(div.style.width)+3+'px';
+                    div.innerHTML=parseInt(div.style.width)/3+'%'
+                    timer=requestAnimationFrame(fn)
+                }else{
+                    cancelAnimationFrame(timer)
+                }
+            })
+                
+        }
+           
+    </script>
+</body>
+</html>
